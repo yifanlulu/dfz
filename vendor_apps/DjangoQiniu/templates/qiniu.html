@@ -1,0 +1,35 @@
+{% load static %}
+<script src="https://cdn.staticfile.org/Plupload/2.1.1/moxie.js"></script>
+<script src="https://cdn.staticfile.org/Plupload/2.1.1/plupload.dev.js"></script>
+<script src="https://cdn.staticfile.org/qiniu-js-sdk/1.0.14-beta/qiniu.js"></script>
+<script src="{% static 'handle_qiniu.js' %}"></script>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5">
+            <input type="text" class="form-control" name="{{ qiniu_field_name }}" value="{{ qiniu_field_value }}">
+        </div>
+        <div class="col-md-5">
+            <button type="button" data-loading-text="正在上传中..." class="btn btn-info" id="{{qiniu_field_name}}_btn">{{ btn_title|default:'上传文件' }}</button>
+            <span class="text-success" hidden style="line-height: 33px; margin-left: 10px;">上传完成</span>
+            <span class="text-danger" hidden style="line-height: 33px; margin-left: 10px;">上传失败</span>
+        </div>
+    </div>
+</div>
+
+<div class="progress" id="{{ qiniu_field_name }}_progress_box" style="display: none; margin-top: 10px;">
+    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+        0%
+        </div>
+    </div>
+<script>
+'use strict';
+$(function () {
+    handle_qiniu({
+        'qiniu_domain': "{{ qiniu_domain }}",
+        'qiniu_field_name': "{{ qiniu_field_name }}",
+        'uptoken_url': "{% url 'qiniu_token' %}",
+        'file_type': "{{ file_type }}"
+    });
+});
+
+</script>

@@ -1,0 +1,74 @@
+@import "../init.scss";
+
+.body-wrapper{
+	.main-wrapper{
+		.banner{
+			width: 100%;
+			height: 200px;
+			img{
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+		}
+		.payinfo-list-container{
+			$item-space: 17px;
+			padding: $item-space 0 0px $item-space;
+			background-color: #fff;
+			.payinfo-ul{
+				overflow: hidden;
+				width: $main-container-width;
+				li{
+					float: left;
+					width: 370px;
+					height: 150px;
+					border: 1px solid $line-dark-color;
+					margin-right: $item-space;
+					margin-bottom: $item-space;
+					.category-group{
+						float: left;
+						width: 100px;
+						height: 150px;
+					}
+					.document-group{
+						background-image: url("http://www.xfz.cn/static/build/images/web-bp-pc.png");
+						background-size: 100%;
+						background-position: 0 0;
+					}
+					.research-report-group{
+						background-image: url("http://www.xfz.cn/static/build/images/web-bg-pc.png");
+						background-size: 100%;
+						background-position: 0 0;
+					}
+					.payinfo-info-group{
+						float: left;
+						width: 270px;
+						height: 150px;
+						box-sizing: border-box;
+						padding: 12px;
+						position: relative;
+						.payinfo-title{
+							color: $main-font-color;
+							font-size: $l4-font-size;
+						}
+						.payinfo-desc{
+							margin-top: 14px;
+							color: $assist-font-color;
+							font-size: $l5-font-size;
+						}
+						.price-text{
+							color: $price-color;
+							font-size: $l3-font-size;
+							position: absolute;
+							right: $item-space;
+							bottom: $item-space;
+						}
+					}
+				}
+			}
+		}
+	}
+	.side-wrapper{
+
+	}
+}

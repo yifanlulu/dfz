@@ -1,0 +1,151 @@
+@import "../init.scss";
+@import "../constant.scss";
+@import "course_common.scss";
+
+.course-list-container{
+	width: $container-width;
+	margin: 20px auto;
+	.important-course-group{
+		overflow: hidden;
+		color: #fff;
+		.large-course-group{
+			float: left;
+			width: 780px;
+			height: 434px;
+			position: relative;
+			img{
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+			.course-info-group{
+				background: rgba(0,0,0,0.6);
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 50px;
+				line-height: 50px;
+				padding: 0 20px;
+				font-size: 14px;
+				color: #fff;
+				.info-group{
+					float: left;
+				}
+				.price-group{
+					float: right;
+					.real-price{
+						color: $price-color;
+						font-size: 20px;
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+		.small-course-group{
+			float: right;
+			width: 380px;
+			.course-item-group{
+				width: 100%;
+				height: 212px;
+				font-size: 14px;
+				position: relative;
+				img{
+					width: 100%;
+					height: 100%;
+					display: block;
+				}
+				.course-info-group{
+					padding: 0 10px;
+					overflow: hidden;
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					height: 40px;
+					line-height: 40px;
+					background: rgba(0,0,0,0.6);
+					color: #fff;
+					.info-group{
+						float: left;
+					}
+					.price-group{
+						float: right;
+						.real-price{
+							color: $price-color;
+							font-size: 16px;
+						}
+					}
+				}
+				&:last-of-type{
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+	.newest-course-group{
+		width: $container-width + 20px;
+		.newest-course-title{
+			background: url('http://www.xfz.cn/static/build/images/boundary-pc.png');
+			background-size: 100%;
+			background-repeat: no-repeat;
+			width: 170px;
+			height: 40px;
+			margin: 20px 0;
+			.text-group{
+				text-align: center;
+				color: #fff;
+				line-height: 40px;
+			}
+		}
+		.newest-course-list-group{
+			overflow: hidden;
+			li{
+				float: left;
+				width: 278px;
+				height: 300px;
+				margin-right: 19px;
+				margin-bottom: 20px;
+				background: #fff;
+				position: relative;
+				transition: all 0.3s;
+				&:hover{
+					box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+				}
+				a{
+					.thumbnail-group{
+						display: block;
+						width: 100%;
+						height: 156px;
+					}
+					.course-info-group{
+						padding: 20px 20px;
+						.course-title{
+							color: #212121;
+							font-size: 16px;
+						}
+						.teacher-info-group{
+							color: #888;
+							font-size: 14px;
+							margin-top: 10px;
+						}
+					}
+					.price-text{
+						font-size: 16px;	
+						position: absolute;
+						right: 20px;
+						bottom: 15px;
+						left: 0;
+						text-align: right;
+					}
+					.nofree-price-text{
+						color: $price-color;
+					}
+					.free-price-text{
+						color: #7ed321;
+					}
+				}
+			}
+		}
+	}
+}

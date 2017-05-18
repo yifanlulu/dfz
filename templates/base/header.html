@@ -1,0 +1,27 @@
+<header class="header">
+    <div class="container">
+        <div class="logo-box">
+            <img src="http://www.xfz.cn/static/build/images/logo.png" alt="">
+        </div>
+        <ul class="top-nav">
+            <li>
+                <a href="/">创投资讯</a>
+            </li>
+            <li>
+                <a href="{% url 'course:index' %}">创业课堂</a>
+            </li>
+            <li>
+                <a href="{% url 'payinfo:index' %}">付费资讯</a>
+            </li>
+            <li>
+                <a href="{% url 'search' %}">搜索</a>
+            </li>
+        </ul>
+        <div class="auth-box">
+            <div class="login-box">
+                <i class="iconfont icon-geren"></i>
+                <a href="{% url 'account:login' %}">登录/</a><a href="{% url 'account:regist' %}">注册</a>
+            </div>
+        </div>
+    </div>
+</header>

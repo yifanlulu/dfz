@@ -1,0 +1,99 @@
+@import "../init.scss";
+
+.auth-container{
+    background: #fff;
+    width: 400px;
+    border-radius: 3px;
+    padding: 20px;
+    margin: 105px auto 20px;
+    overflow: hidden;
+
+    .form-row{
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+    .title-group{
+        overflow: hidden;
+        border-bottom: 1px solid $line-color;
+        .title-text{
+            font-size: $l3-font-size;
+            color: $main-font-color;
+            float: left;
+            font-weight: 500;
+            border-bottom: 3px solid $blue-text-color;
+            height:33px;
+        }
+        .link-text{
+            color: $blue-text-color;
+            font-size: $l3-font-size;
+            float: right;
+        }
+    }
+
+    .text-input{
+        border: 1px solid $line-dark-color;
+        border-radius: 3px;
+        padding: 10px;
+        font-size: $l4-font-size;
+        height: 50px;
+        width: 100%;
+        outline:none;
+        box-sizing: border-box;
+    }
+
+    .captcha-text-input{
+        width: 288px;
+        float: left;
+    }
+
+    .captcha-img{
+        float: right;
+        width: 100px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+
+    .captcha-btn{
+        $height: 47px;
+        height:$height;
+        line-height: $height;
+        width: 100px;
+        border:1px solid $blue-text-color;
+        text-align: center;
+        color: $blue-text-color;
+        float: right;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .disabled-captcha-btn{
+        color: $disable-color;
+        border-color: $disable-color;
+    }
+
+    .login-more-group{
+        font-size: $l5-font-size;
+        .auto-login-group{
+            float: left;
+            color: $main-font-color;
+            font-weight: 600;
+        }
+        .forget-pwd{
+            float: right;
+            color: $assist-font-color;
+        }
+    }
+
+    .submit-btn{
+        height:50px;
+        width: 100%;
+        font-size:$l2-font-size;
+        color: #fff;
+        text-align: center;
+        background: $blue-text-color;
+        border:none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+}

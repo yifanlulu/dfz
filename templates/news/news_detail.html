@@ -1,0 +1,64 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load custom_filters %}
+
+{% block title %}新闻详情{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/news/news_detail.min.css" %}">
+{% endblock %}
+
+{% block container %}
+    <div class="body-wrapper">
+		<div class="main-wrapper">
+			<div class="article-group">
+				<p class="article-title-group">{{ news.title }}</p>
+				<div class="article-info-group">
+					<div class="left-info-group">
+						<span class="author-time-group">{{ news.author.username }}</span>
+						<span class="author-time-group">{{ news.create_time|fmt_datetime }}</span>
+						<span class="category-group">{{ news.category.name }}</span>
+					</div>
+					<div class="right-share-group">
+						<span class="tag-style share-icon weibo-share"></span>
+						<span class="tag-style share-icon wx-share"></span>
+						<span class="tag-style">分享至：</span>
+					</div>
+				</div>
+				<article class="article-content-group">
+					{{ news.content|safe }}
+				</article>
+				<div class="comment-group">
+					<h2 class="comment-title">文章评论(0)</h2>
+					<textarea placeholder="立即登录，参与评论~" cols="30" rows="10" class="comment-textarea nologin-textarea"></textarea>
+					<div class="submit-comment-group">
+						<button class="submit-comment-btn">评论</button>
+					</div>
+				</div>
+				<ul class="comment-list-group">
+					<li>
+						<div class="top-info-group">
+							<div class="user-info-group">
+								<img src="http://7xl0ey.com2.z0.glb.qiniucdn.com/1458392835_51884.jpg" alt="">
+								<span class="username-group">黄勇</span>
+							</div>
+							<p class="time-group">刚刚</p>
+						</div>
+						<p class="comment-content-group">辛苦编辑了！</p>
+					</li>
+					<li>
+						<div class="top-info-group">
+							<div class="user-info-group">
+								<img src="http://7xl0ey.com2.z0.glb.qiniucdn.com/1458392835_51884.jpg" alt="">
+								<span class="username-group">黄勇</span>
+							</div>
+							<p class="time-group">刚刚</p>
+						</div>
+						<p class="comment-content-group">辛苦编辑了！</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="side-wrapper"></div>
+	</div>
+{% endblock %}

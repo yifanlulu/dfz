@@ -1,0 +1,225 @@
+@import "course_common.scss";
+
+.course-container{
+
+	@mixin buy-course-layout($margin-top: 27px){
+		.buy-course-group{
+			float: right;
+			margin-top: $margin-top;
+			overflow: hidden;
+			.buy-course-btn{
+				background-color: #ff8d3f;
+				height: 40px;
+				width: 120px;
+				text-align: center;
+				line-height: 40px;
+				color: #fff;
+				border-radius: 5px; 
+				font-size: 16px;
+				float: right;
+			}
+			.price-text{
+				color: $price-color;
+				float: right;
+				margin-right: 20px;
+				line-height: 40px;
+				font-size: 20px;
+			}
+		}
+	}
+
+	$course-container-width: 1070px;
+	width: 1070px;
+	margin: 20px auto;
+	.course-video-container{
+		background-color: #fff;
+		.banner{
+			padding: 20px;
+			background: #fff;
+			overflow: hidden;
+			.banner-left{
+				width: 600px;
+				float: left;
+				.video-title{
+					font-size: 20px;
+					color: #212121;	
+				}
+				.share-video-group{
+					color: #696969;
+					font-size: 14px;
+					margin-top: 20px;
+					span{
+						display: inline-block;
+						margin-right: 8px;
+					}
+					.share-icon{
+						width: 20px;
+						height: 20px;
+						background-image: url('http://www.xfz.cn/static/build/images/share.png');
+						background-size: auto 100%;
+						background-repeat: no-repeat;
+						// background-color: red;
+						vertical-align: bottom;
+					}
+					.wx-share-icon{
+						background-position: 0 0;
+					}
+					.weibo-share-icon{
+						background-position: -27px 0px;
+					}
+				}
+			}
+			@include buy-course-layout;
+		}
+		.video-container{
+			width: 100%;
+			height: 630px;
+			background-color: skyblue;
+		}
+	}
+	.course-detail-container{
+		margin-top: 30px;
+		width: $course-container-width;
+		overflow: hidden;
+		.main-detail-container{
+			float: left;
+			width: 700px;
+			.detail-item-group{
+				margin-bottom: 20px;
+				background-color: #fff;
+				padding: 20px;
+				overflow: hidden;
+				.item-title{
+					border-left: 6px solid #5b86db;
+					padding: 0 10px;
+					color: $main-font-color;
+					font-size: $l3-font-size;
+				}
+				.item-content{
+					font-size: $l5-font-size;
+					color: $body-font-color;
+					line-height: 2em;
+					margin-top: 20px;
+					overflow: hidden;
+				}
+				.inner-course-title{
+					font-size: $l3-font-size;
+					color: $main-font-color;
+					float: left;
+					line-height: 40px;
+				}
+				@include buy-course-layout(0);
+				.teacher-group{
+					margin-top: 20px;
+					overflow: hidden;
+					.avatar-group{
+						display: block;
+						width: 62px;
+						height: 62px;
+						border-radius: 50%;
+						float: left;
+					}
+					.teacher-info-group{
+						float: left;
+						margin-left: 10px;
+						position: relative;
+						font-size: $l4-font-size;
+						color: $assist-font-color;
+						height: 62px;
+						width: 70%;
+						.author-name{
+							position: absolute;
+							left: 0;
+							top: 8px;
+						}
+						.author-identify{
+							position: absolute;
+							bottom: 8px;
+							left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.side-detail-container{
+	float: right;
+	width: 358px;
+	background-color: #fff;
+	padding: 20px;
+	padding-bottom: 0;
+	box-sizing: border-box;
+	.side-title{
+		color: $main-font-color;
+		font-size: $l3-font-size;
+	}
+	.large-recommend-group{
+		margin-top: 20px;
+		.important-recommend{
+			width: 317px;
+			height: 180px;
+			position: relative;
+			margin-bottom: 15px;
+			img{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			.course-info-group{
+				background-color: rgba(0,0,0,0.6);
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 42px;
+				padding: 0 15px;
+				line-height: 42px;
+				color: #fff;
+				font-size: $l5-font-size;
+				.left-info{
+					float: left;
+				}
+				.right-info{
+					float: right;
+					.price-text{
+						color: $price-color;
+						font-size: $l3-font-size;
+					}
+				}
+			}
+		}
+	}
+	.small-recommend-group{
+		li{
+			overflow: hidden;
+			border-bottom: 1px solid $line-color;
+			padding-bottom: 10px;
+			margin-bottom: 20px;
+			.left-info-group{
+				float: left;
+				width: 150px;
+				position: relative;
+				height: 94px;
+				.course-title{
+					font-size: $l5-font-size;
+					color: $main-font-color;
+				}
+				.teacher-info{
+					font-size: $l6-font-size;
+					color: $assist-font-color;
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 0;
+				}
+			}
+			.course-thumbnail{
+				float: right;
+				width: 160px;
+				height: 90px;
+			}
+		}
+	}
+}

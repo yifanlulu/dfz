@@ -1,0 +1,35 @@
+{% extends 'account/login_regist_base.html' %}
+
+{% block formcontainer %}
+    <div class="form-row title-group">
+        <p class="title-text">请注册
+        </p>
+        <a href="{% url 'account:login' %}" class="link-text">立即登录></a>
+    </div>
+    <div class="form-row">
+        <input type="text" class="text-input" placeholder="手机号" name="telephone">
+    </div>
+    <div class="form-row">
+        <input type="text" class="text-input" placeholder="用户名" name="username">
+    </div>
+    <div class="form-row">
+        <input type="text" class="text-input captcha-text-input" placeholder="验证码" name="graph_captcha">
+        <img class="captcha-img" src="{% url 'account:graph_captcha' %}" alt="">
+    </div>
+    <div class="form-row">
+        <input name="password1" type="password" class="text-input" placeholder="密码">
+    </div>
+    <div class="form-row">
+        <input name="password2" type="password" class="text-input" placeholder="重复密码">
+    </div>
+    <div class="form-row">
+        <input type="text" class="text-input captcha-text-input" placeholder="短信验证码" name="sms_captcha">
+        <span class="captcha-btn">发送验证码</span>
+    </div>
+    <div class="form-row" style="display: none;">
+        <p class="danger-text" style="line-height: 50px;"></p>
+    </div>
+    <div class="form-row">
+        <input type="submit" class="submit-btn" id="submit-btn" value="立即注册">
+    </div>
+{% endblock %}

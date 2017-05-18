@@ -1,0 +1,26 @@
+{% extends "account/login_regist_base.html" %}
+{% load static %}
+
+{% block formcontainer %}
+    <div class="form-row title-group">
+        <p class="title-text">请登录
+        </p>
+        <a href="{% url 'account:regist' %}" class="link-text">立即注册></a>
+    </div>
+    <div class="form-row">
+        <input type="text" class="text-input" placeholder="请输入手机号码">
+    </div>
+    <div class="form-row">
+        <input type="password" class="text-input" placeholder="请输入密码">
+    </div>
+    <div class="form-row login-more-group">
+        <label class="auto-login-group">
+            <input type="checkbox" name="remember">
+            七天内自动登录
+        </label>
+        <a href="#" class="forget-pwd">忘记密码？</a>
+    </div>
+    <div class="form-row login-more-group">
+        <button class="submit-btn">登录</button>
+    </div>
+{% endblock %}

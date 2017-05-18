@@ -1,0 +1,120 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/course/course_index.min.css' %}">
+{% endblock %}
+
+{% block container %}
+    <nav class="course-nav">
+		<div class="nav-container">
+			<h2 class="nav-title">在线课堂</h2>
+			<ul class="nav-ul">
+				<li class="active"><a href="#">最新课堂</a></li>
+				<li><a href="#">系列课</a></li>
+				<li><a href="#">夜校</a></li>
+				<li><a href="#">投资人说</a></li>
+				<li><a href="#">明星案例</a></li>
+				<li><a href="#">创业知识</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="course-list-container">
+		<div class="important-course-group">
+			<div class="large-course-group">
+				<a href="#">
+					<img src="http://static-image.xfz.cn/1493801258_128.jpg" alt="">
+					<div class="course-info-group">
+						<p class="info-group">共 6 节课 时长：5小时</p>
+						<p class="price-group">
+							<span class="real-price">￥269</span>
+							<span>（省95元）</span>
+						</p>
+					</div>
+				</a>
+			</div>
+			<div class="small-course-group">
+				<div class="course-item-group">
+					<a href="#">
+						<img src="http://static-image.xfz.cn/1492068915_703.jpg-seriescourse.list" alt="">
+						<div class="course-info-group">
+							<p class="info-group">共 6 节课 时长：6小时</p>
+							<p class="price-group">
+								<span class="real-price">￥199</span>
+								<span>（省95.90）</span>
+							</p>
+						</div>
+					</a>
+				</div>
+				<div class="course-item-group">
+					<a href="#">
+						<img src="http://static-image.xfz.cn/1487671210_62.jpeg-seriescourse.list" alt="">
+						<div class="course-info-group">
+							<p class="info-group">时长：75分钟</p>
+							<p class="price-group">
+								<span class="real-price">￥139</span>
+							</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="newest-course-group">
+			<div class="newest-course-title">
+				<p class="text-group">最新课堂</p>
+			</div>
+			<div class="newest-course-list-group">
+				<li>
+					<a href="#">
+						<img class="thumbnail-group" src="http://static-image.xfz.cn/1494916176_797.png-course.list.small" alt="">
+						<div class="course-info-group">
+							<p class="course-title">企业设立及基础架构</p>
+							<p class="teacher-info-group">姚宁 / 以后太财税 创始人兼CEO</p>
+						</div>
+						<p class="price-text nofree-price-text">￥49</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="thumbnail-group" src="http://static-image.xfz.cn/1494919178_814.jpg-course.list.small" alt="">
+						<div class="course-info-group">
+							<p class="course-title">怎么看懂现金流量表</p>
+							<p class="teacher-info-group">李薇 / 易后台财税 内容总监</p>
+						</div>
+						<p class="price-text nofree-price-text">￥49</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="thumbnail-group" src="http://static-image.xfz.cn/1494919378_526.png-course.list.small" alt="">
+						<div class="course-info-group">
+							<p class="course-title">缺钱企业最便宜的现金来源</p>
+							<p class="teacher-info-group">李薇 / 易后台财税 内容总监</p>
+						</div>
+						<p class="price-text nofree-price-text">￥39</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="thumbnail-group" src="http://static-image.xfz.cn/1494919378_526.png-course.list.small" alt="">
+						<div class="course-info-group">
+							<p class="course-title">缺钱企业怎么玩转现金流？</p>
+							<p class="teacher-info-group">李薇 / 易后台财税 内容总监</p>
+						</div>
+						<p class="price-text nofree-price-text">￥49</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img class="thumbnail-group" src="http://static-image.xfz.cn/1484279146_534.png-course.list.small" alt="">
+						<div class="course-info-group">
+							<p class="course-title">短视频社交的逻辑与未来</p>
+							<p class="teacher-info-group">宿华 / 快手创始人</p>
+						</div>
+						<p class="price-text free-price-text">免费</p>
+					</a>
+				</li>
+			</div>
+		</div>
+	</div>
+{% endblock %}

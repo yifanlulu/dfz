@@ -1,0 +1,212 @@
+@import "constant.scss";
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video 
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    list-style: none;
+    text-decoration: none;
+}
+
+body, html {
+    font-family: Montserrat,'Microsoft YaHei','Heiti SC',simhei,'Lucida Sans Unicode','Myriad Pro','Hiragino Sans GB',Verdana;
+}
+
+body{
+  background: #f2f2f2;
+}
+
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
+
+.body-wrapper{
+	width: $container-width;
+	margin-top: 87px;
+  overflow: hidden;
+  margin: 87px auto 0;
+  min-height: 500px;
+}
+
+.main-wrapper{
+	width: $main-container-width;
+	float: left;
+	margin-right: 20px;
+}
+
+.side-wrapper{
+	width: $side-container-width;
+	float: right;
+}
+
+.danger-text{
+  color: $danger-text-color;
+  text-align: center;
+  font-size: $l4-font-size;
+}
+
+
+.header{
+  $header-height: 65px;
+  z-index: 999;
+
+  background: #3a3a3a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  .container{
+    width: $container-width;
+    height: 100%;
+    margin: 0 auto;
+    color: #fff;
+    .logo-box{
+      float: left;
+      img{
+        display: block;
+        margin-top: 8px;
+      }
+    }
+    .top-nav{
+      height: 100%;
+      float: left;
+      margin-left: 82px;
+      li{
+        height: 100%;
+        float: left;
+        margin-left: 40px;
+        box-sizing: border-box;
+        &.active{
+          border-bottom: 5px solid #5b86db;
+        }
+      }
+      a{
+        text-decoration: none;
+        line-height: $header-height;
+        color: #fff;
+      }
+    }
+    .auth-box{
+      float: right;
+      .login-box{
+        height: $header-height;
+        display: flex;
+        align-items: center;
+        i{
+          font-size: 24px;
+          margin-right: 5px;
+        }
+        a{
+          color: #fff;
+          font-size: 14px;  
+        }
+      }
+    }
+  }
+}
+
+.footer-group{
+  color: #c9c9c9;
+  font-size: 13px;
+  margin-top: 20px;
+  .company-outer-group{
+    background: #555e68;
+    .company-inner-group{
+      width: 1170px;
+      height: 100px;
+      margin: 0 auto;
+      overflow: hidden;
+      .logo-group{
+        float: left;
+        background-image: url('http://www.xfz.cn/static/build/images/foot-logo.png');
+        width: 168px;
+        height: 54px;
+        margin-top: 25px;
+        background-size: 100%;
+      }
+      .detail-info-group{
+        margin-left: 85px;
+        float: left;
+        .top-group{
+          margin-top: 30px;
+          overflow: hidden;
+          .links-group{
+            float: left;
+            overflow: hidden;
+            li{
+              border-right: 1px solid #c9c9c9;
+              padding-right: 10px;
+              padding-left: 10px;
+              float: left;
+              a{
+                color: #c9c9c9;
+                font-size: 13px;
+              }
+              &:first-of-type{
+                margin-left: 0;
+                padding-left: 0;
+              }
+              &:last-of-type{
+                border-right: none;
+              }
+            }
+          }
+          .focus-group{
+            float: left;
+            margin-left: 30px;
+            overflow: hidden;
+            .focus-title-group{
+              float: left;
+            }
+            .focus-item-group{
+              margin-left: 10px;
+              float: left;
+              line-height: 20px;
+              .item-logo-group{
+                width: 24px;
+                height: 20px;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                display: inline-block;
+                vertical-align: bottom;
+              }
+              .wx-logo-group{
+                background-image: url('http://www.xfz.cn/static/build/images/wx-icon.png');
+              }
+              .weibo-logo-group{
+                background-image: url('http://www.xfz.cn/static/build/images/xl-icon.png');
+                margin-left: 15px;
+              }
+              .item-text-group{
+                color: #fff;
+              }
+            }
+          }
+        }
+        .bottom-group{
+          overflow: hidden;
+          margin-top: 10px;
+          .address-group{
+            float: left;
+          }
+          .contact-group{
+            float: left;
+            margin-left: 40px;
+          }
+        }
+      }
+    }
+  }
+  .copyright-group{
+    background-color: #383E44;
+    text-align: center;
+    height: 58px;
+    line-height: 58px;
+  }
+}

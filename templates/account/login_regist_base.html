@@ -1,0 +1,12 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/account/account.min.css' %}">
+{% endblock %}
+
+{% block container %}
+    <div class="auth-container">
+        {% block formcontainer %}{% endblock %}
+    </div>
+{% endblock %}

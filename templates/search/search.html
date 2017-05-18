@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/search/search.min.css' %}">
+{% endblock %}
+
+{% block container %}
+    <div class="body-wrapper">
+		<div class="main-wrapper">
+			<div class="search-group">
+				<input type="text" class="search-input" placeholder="请输入关键字">
+				<button class="search-btn">搜索</button>
+			</div>
+		</div>
+		<div class="side-wrapper"></div>
+	</div>
+{% endblock %}

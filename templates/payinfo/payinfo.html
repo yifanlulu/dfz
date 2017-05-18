@@ -1,0 +1,61 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/payinfo/payinfo.min.css" %}">
+{% endblock %}
+
+{% block container %}
+    <div class="body-wrapper">
+		<div class="main-wrapper">
+			<div class="banner">
+				<img src="http://www.xfz.cn/static/build/images/web-venture-banner.png" alt="">
+			</div>
+			<div class="payinfo-list-container">
+				<ul class="payinfo-ul">
+					<li>
+						<a href="#">
+							<div class="category-group document-group"></div>
+							<div class="payinfo-info-group">
+								<p class="payinfo-title">如何写好一份商业计划书</p>
+								<p class="payinfo-desc">一份好的商业计划书，是创业成功的开始！</p>
+								<p class="price-text">￥8.8</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="category-group research-report-group"></div>
+							<div class="payinfo-info-group">
+								<p class="payinfo-title">大数据、AI与企业服务</p>
+								<p class="payinfo-desc">大数据、AI与企业服务市场的交融将带来什么新的机会？</p>
+								<p class="price-text">￥9.9</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="category-group research-report-group"></div>
+							<div class="payinfo-info-group">
+								<p class="payinfo-title">大数据、AI与企业服务</p>
+								<p class="payinfo-desc">大数据、AI与企业服务市场的交融将带来什么新的机会？</p>
+								<p class="price-text">￥9.9</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="category-group research-report-group"></div>
+							<div class="payinfo-info-group">
+								<p class="payinfo-title">大数据、AI与企业服务</p>
+								<p class="payinfo-desc">大数据、AI与企业服务市场的交融将带来什么新的机会？</p>
+								<p class="price-text">￥9.9</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="side-wrapper"></div>
+	</div>
+{% endblock %}

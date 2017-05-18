@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "fonts/iconfont.css" %}">
+    <script src="{% static "js/vendor/vendor.min.js" %}"></script>
+    <script src="{% static "js/base.min.js" %}"></script>
+    <title>{% block title %}{% endblock %}</title>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    {% include "base/header.html" %}
+    {% block container %}{% endblock %}
+    {% include "base/footer.html" %}
+</body>
+</html>

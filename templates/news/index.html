@@ -1,0 +1,117 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% load custom_filters %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/news/index.min.css" %}">
+    <script src={% static "js/index.min.js" %}></script>
+{% endblock %}
+
+{% block container %}
+    <div class="body-wrapper">
+		<div class="main-wrapper">
+			<div class="banner-group">
+				<ul class="banner" id="banner">
+                    {% for banner in banners %}
+                        <li><a href="{{ banner.link_to }}" target="_blank"><img src="{{ banner.thumbnail }}" alt="{{ banner.title }}"></a></li>
+                    {% endfor %}
+				</ul>
+				<div class="page-control-group">
+					<ul>
+                        {% for banner in banners %}
+                            {% if forloop.first %}
+                                <li class="active"></li>
+                            {% else %}
+                                <li></li>
+                            {% endif %}
+                        {% endfor %}
+					</ul>
+				</div>
+                <span class="arrow-btn pre-arrow-btn">‹</span>
+                <span class="arrow-btn next-arrow-btn">›</span>
+			</div>
+			<div class="list-outer-group">
+				<ul class="list-tab-group">
+					<li class="active" data-category-id="0">最新资讯</li>
+                    {% for category in categories %}
+                        <li data-category-id="{{ category.id }}">{{ category.name }}</li>
+                    {% endfor %}
+				</ul>
+                <ul class="list-content-group">
+                    {% for news in newses %}
+                        <li>
+                            <div class="thumbnail-group">
+                                <a href="{% url 'news:detail' news_id=news.id %}">
+                                    <img src="{{ news.thumbnail }}" alt="">
+                                </a>
+                            </div>
+                            <div class="content-group">
+                                <p class="title-group">
+                                    <a href="{% url 'news:detail' news_id=news.id %}">
+                                        {{ news.title }}
+                                    </a>
+                                </p>
+                                <p class="desc-group">{{ news.desc }}</p>
+                                <div class="content-footer">
+                                    <span class="category-group">{{ news.category.name }}</span>
+                                    <span class="time-group">{{ news.create_time|fmt_datetime }}</span>
+                                    <span class="author-group">{{ news.author.username }}</span>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+				</ul>
+				<div class="list-more-group">
+					<button class="load-more-btn" id="load-more-btn" data-category-id="">加载更多</button>
+				</div>
+			</div>
+		</div>
+		<div class="side-wrapper">
+			<div class="course-group">
+				<div class="top-group">
+					<span class="title-group">在线课堂</span>
+					<a href="#" class="more-group">更多</a>
+				</div>
+				<div class="thumbnail-group">
+					<a href="#">
+						<img src="http://static-image.xfz.cn/1493801258_128.jpg-course.list.small" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="pay-info-group">
+				<a href="#">
+					<img src="http://www.xfz.cn/static/build/images/side-gift-banner.png" alt="">
+				</a>
+			</div>
+			<div class="focus-group">
+				<div class="title-group">关注小饭桌</div>
+				<div class="website-group">
+					<div class="left-group">
+						<div class="item-group">
+							<div class="logo-group zhihu-logo"></div>
+							<div class="text-group">
+								<a href="#">小饭桌创业课堂</a>
+							</div>
+						</div>
+						<div class="item-group">
+							<div class="logo-group weibo-logo"></div>
+							<div class="text-group">
+								<a href="#">小饭桌创业课堂</a>
+							</div>
+						</div>
+						<div class="item-group">
+							<div class="logo-group toutiao-logo"></div>
+							<div class="text-group">
+								<a href="#">小饭桌</a>
+							</div>
+						</div>
+					</div>
+					<div class="right-group">
+						<div class="qr-group"></div>
+						<p class="text-group">扫码关注小饭桌微信公众平台xfz008</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

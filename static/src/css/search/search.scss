@@ -1,0 +1,35 @@
+@import "../init.scss";
+
+.main-wrapper{
+	background: #fff;
+	.search-group{
+		width: 732px;
+		height: 44px;
+		border: 1px solid $line-color;
+		border-radius: 3px;
+		overflow: hidden;
+		margin: 40px auto;
+		.search-input{
+			padding: 10px;
+			font-size: $l2-font-size;
+			float: left;
+			width: 612px;
+			box-sizing: border-box;
+			border: none;
+			outline: none;
+			color: $assist-font-color;
+		}
+		.search-btn{
+			float: right;
+			width: 120px;
+			height: 100%;
+			background: $blue-text-color;
+			text-align: center;
+			font-size: $l3-font-size;
+			line-height: 44px;
+			color: #fff;
+			outline: none;
+			border: none;
+		}
+	}
+}

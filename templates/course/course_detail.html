@@ -1,0 +1,160 @@
+{% extends 'base/base.html' %}
+{% load  static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/course/course_detail.min.css" %}">
+{% endblock %}
+
+{% block container %}
+    <nav class="course-nav">
+		<div class="nav-container">
+			<h2 class="nav-title">在线课堂</h2>
+			<ul class="nav-ul">
+				<li class="active"><a href="#">最新课堂</a></li>
+				<li><a href="#">系列课</a></li>
+				<li><a href="#">夜校</a></li>
+				<li><a href="#">投资人说</a></li>
+				<li><a href="#">明星案例</a></li>
+				<li><a href="#">创业知识</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="course-container">
+		<div class="course-video-container">
+			<div class="banner">
+				<div class="banner-left">
+					<p class="video-title">育学园的儿童健康线上线下闭环模式</p>
+					<div class="share-video-group">
+						<span>分享至：</span>
+						<span class="share-icon wx-share-icon"></span>
+						<span class="share-icon weibo-share-icon"></span>
+					</div>
+				</div>
+				<div class="buy-course-group">
+					<a href="javascript(0);" class="buy-course-btn">购买课程</a>
+					<span class="price-text">￥69</span>
+				</div>
+			</div>
+			<div class="video-container"></div>
+		</div>
+		<div class="course-detail-container">
+			<div class="main-detail-container">
+				<div class="detail-item-group">
+					<p class="item-title">课程讲师</p>
+					<div class="teacher-group">
+						<img src="http://static-image.xfz.cn/1492494967_183.jpg" alt="" class="avatar-group">
+						<div class="teacher-info-group">
+							<p class="author-name">姜巍</p>
+							<p class="author-identify">育学园联合创始人</p>
+						</div>
+					</div>
+					<div class="item-content">
+						姜巍—北京崔玉涛儿童健康管理中心有限公司董事COO。毕业于北京大学信息管理系，拥有20年互联网从业经验。曾任宝宝树产品、运营与内容的负责人。北京崔玉涛儿童健康管理中心有限公司，专注为母婴及相关领域用户群体提供专业医疗和科学育儿健康管理服务。依托互联网打造线上互动与线下服务相结合的儿童健康管理平台。
+					</div>
+				</div>
+				<div class="detail-item-group">
+					<p class="item-title">课程简介</p>
+					<div class="item-content">
+						崔玉涛作为中国最著名的儿科专家，投身互联网医疗创业也是备受关注。育学园致力于打造儿童健康的线上线下O2O闭环，模式上独创线上APP，线下儿童健康管理诊所的巧妙结合。
+育学园联合创始人姜巍在小饭桌医疗创业班中分享了育学园如何打造儿童健康线上线下的闭环。
+					</div>
+				</div>
+				<div class="detail-item-group">
+					<p class="item-title">课程大纲</p>
+					<div class="item-content">
+						<p>一、育学园的线上产品运营之路</p>
+						<p>二、医疗与健康为主的线下差异化创新</p>
+						<p>三、“合而不同”的线上与线下融合闭环</p>
+					</div>
+				</div>
+				<div class="detail-item-group">
+					<p class="item-title">课程信息</p>
+					<div class="item-content">
+						<p>课程主题：育学园的儿童健康线上线下闭环模式</p>
+						<p>上课方式：在线视频学习</p>
+						<p>课程时长：60分钟</p>
+						<p>收费：69元</p>
+						<p>时间：付费后即可随时观看</p>
+					</div>
+				</div>
+				<div class="detail-item-group">
+					<p class="item-title">适宜人群</p>
+					<div class="item-content">
+						医疗健康及母婴行业从业者
+					</div>
+				</div>
+				<div class="detail-item-group">
+					<p class="item-title">帮助中心</p>
+					<div class="item-content">
+						<p>1. 购买后的课程在线可反复观看学习，视频有效期以具体课程信息为准。 </p>
+						<p>2. 课程暂不支持下载观看，均为在线观看视频。 </p>
+						<p>3. 课程一经购买，不可转让、不可退款；仅限购买账号观看。</p>
+						<p>4. 如有问题请咨询客服饭桌君： 电话：18618172287 微信：fanzhuojun888 </p>
+					</div>
+				</div>
+				<div class="detail-item-group">
+					<p class="item-title">关于小饭桌夜校</p>
+					<div class="item-content">
+						小饭桌夜校是小饭桌旗下的在线课程产品，汇聚顶级创业大咖导师、行业资深专家，致力于用系统、垂直的知识体系让创业者认知升级、技能进阶。小饭桌夜校用知识陪伴创业者从平凡到卓越！
+					</div>
+				</div>
+				<div class="detail-item-group">
+					<p class="inner-course-title">育学园的儿童健康线上线下闭环模式</p>
+					<div class="buy-course-group">
+						<a href="javascript(0);" class="buy-course-btn">购买课程</a>
+						<span class="price-text">￥69</span>
+					</div>
+				</div>
+			</div>
+			<div class="side-detail-container">
+				<p class="side-title">推荐课程</p>
+				<div class="large-recommend-group">
+					<div class="important-recommend">
+						<a href="#">
+							<img src="http://static-image.xfz.cn/1493801258_128.jpg-course.list.small" alt="">
+							<div class="course-info-group">
+								<p class="left-info">共6节课</p>
+								<p class="right-info">
+									<span class="price-text">￥269</span>
+									（省120元）
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="important-recommend">
+						<a href="#">
+							<img src="http://static-image.xfz.cn/1492068915_703.jpg-course.list.small" alt="">
+							<div class="course-info-group">
+								<p class="left-info">共6节课</p>
+								<p class="right-info">
+									<span class="price-text">￥199</span>
+									（省120元）
+								</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<ul class="small-recommend-group">
+					<li>
+						<a href="#">
+							<div class="left-info-group">
+								<p class="course-title">创业公司财务团队如何配置和搭建</p>
+								<p class="teacher-info">姚宁/易后台财税 创始人兼CEO</p>
+							</div>
+							<img class="course-thumbnail" src="http://static-image.xfz.cn/1494918988_843.png-course.list.small" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="left-info-group">
+								<p class="course-title">企业设立及基础架构</p>
+								<p class="teacher-info">姚宁/易后台财税 创始人兼CEO</p>
+							</div>
+							<img class="course-thumbnail" src="http://static-image.xfz.cn/1494916176_797.png-course.list.small" alt="">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+@import "../init.scss";
+
+.course-nav{
+	height: 54px;
+	line-height: 54px;
+	background: #fff;
+	box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+	margin-top: 65px;
+	.nav-container{
+		width: $container-width;
+		margin: 0 auto;
+		overflow: hidden;
+		.nav-title{
+			font-size: 24px;
+			color: #696969;
+			float: left;
+		}
+		.nav-ul{
+			font-size: 16px;
+			margin-left: 80px;
+			overflow: hidden;
+			float: left;
+			li{
+				float: left;
+				padding: 0 40px;
+				a{
+					color: #888;
+					&:hover{
+						color: #212121;
+					}
+				}
+			}
+			li.active{
+				a{
+					color: #212121;
+				}
+			}
+		}
+	}
+}
+
